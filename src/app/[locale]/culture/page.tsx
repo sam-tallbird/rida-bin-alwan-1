@@ -1,7 +1,6 @@
 import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
-import Image from 'next/image';
 
 export async function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));

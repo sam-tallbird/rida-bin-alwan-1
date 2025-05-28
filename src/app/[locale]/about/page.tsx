@@ -1,6 +1,7 @@
 import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
@@ -46,19 +47,25 @@ export default async function AboutPage({ params }: PageProps) {
       <section className="w-full h-[32rem] flex px-8 py-6 gap-4">
         {/* Left Image */}
         <div className="w-1/2">
-          <img 
+          <Image 
             src="/imgs/about-us/header-left.JPG" 
             alt="Coffee shop interior left"
             className="w-full h-full object-cover rounded-lg"
+            width={800}
+            height={600}
+            priority
           />
         </div>
 
         {/* Right Image */}
         <div className="w-1/2">
-          <img 
+          <Image 
             src="/imgs/about-us/header-right.JPG" 
             alt="Coffee shop interior right"
             className="w-full h-full object-cover rounded-lg"
+            width={800}
+            height={600}
+            priority
           />
         </div>
       </section>

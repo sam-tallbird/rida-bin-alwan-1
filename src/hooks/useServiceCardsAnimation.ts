@@ -124,9 +124,9 @@ export function useServiceCardsAnimation(options: UseServiceCardsAnimationOption
     const timeoutId = setTimeout(() => {
       const removeScrollListener = setupScrollListener();
       
-      // Store cleanup function
-      if (sectionRef.current) {
-        (sectionRef.current as HTMLElement & { _scrollCleanup?: () => void })._scrollCleanup = removeScrollListener;
+      // Store cleanup function on the section element
+      if (section) {
+        (section as HTMLElement & { _scrollCleanup?: () => void })._scrollCleanup = removeScrollListener;
       }
     }, 100);
     
@@ -136,9 +136,8 @@ export function useServiceCardsAnimation(options: UseServiceCardsAnimationOption
     return () => {
       clearTimeout(timeoutId);
       
-      // Call stored cleanup function
-      const currentSection = sectionRef.current;
-      const cleanup = (currentSection as HTMLElement & { _scrollCleanup?: () => void })?._scrollCleanup;
+      // Call stored cleanup function using the captured section reference
+      const cleanup = (section as HTMLElement & { _scrollCleanup?: () => void })?._scrollCleanup;
       if (cleanup) cleanup();
     };
   }, [cardConfigs, isRTL, sensitivity, easing]);

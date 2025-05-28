@@ -1,6 +1,7 @@
 import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
@@ -555,10 +556,12 @@ export default async function BranchesPage({ params }: PageProps) {
                 >
                   {/* Branch Image - At the top */}
                   <div className="aspect-[3/4] overflow-hidden">
-                    <img 
+                    <Image 
                       src={branch.image} 
                       alt={branch.name[locale as keyof typeof branch.name]}
                       className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      width={400}
+                      height={533}
                     />
                   </div>
                   

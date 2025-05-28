@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
 import { notFound } from 'next/navigation';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 // Mock news data - will be connected to database later
 const newsArticles = [
@@ -145,10 +146,13 @@ export default async function NewsArticlePage({ params }: PageProps) {
 
             {/* Article Image */}
             <div className="w-full h-[34rem] rounded-lg overflow-hidden mb-16">
-              <img 
+              <Image 
                 src={article.image} 
                 alt={article.headline[locale as keyof typeof article.headline]}
                 className="w-full h-full object-cover"
+                width={1200}
+                height={544}
+                priority
               />
             </div>
 

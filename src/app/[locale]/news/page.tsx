@@ -2,6 +2,7 @@ import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
 import { Link } from '@/i18n/navigation';
+import Image from 'next/image';
 
 // Mock news data - will be connected to database later
 const newsArticles = [
@@ -87,10 +88,12 @@ export default async function NewsPage({ params }: PageProps) {
                     <div className="flex gap-8 items-start rtl:space-x-reverse">
                       {/* Image */}
                       <div className="w-[30rem] h-80 rounded-lg flex-shrink-0 overflow-hidden transition-transform duration-300 group-hover:scale-[1.02]">
-                        <img 
+                        <Image 
                           src={article.image} 
                           alt={article.headline[locale as keyof typeof article.headline]}
                           className="w-full h-full object-cover"
+                          width={480}
+                          height={320}
                         />
                       </div>
                       
