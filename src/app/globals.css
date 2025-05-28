@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Lenis Smooth Scroll CSS - Recommended for optimal performance */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* End Lenis CSS */
+
+:root {
+  --background: #f5f4ed;
+  --foreground: #000000;
+}
+
+:root.dark {
+  --background: #000000;
+  --foreground: #f5f4ed;
+}
+
+/* Fallback for system preference when no theme is set */
+@media (prefers-color-scheme: dark) {
+  :root:not(.light):not(.dark) {
+    --background: #000000;
+    --foreground: #f5f4ed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navigation link animation inspired by LineHoverStyles #14 (.link--carme) */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-link::before {
+  display: none;
+}
+
+.nav-link-graphic {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2px;
+}
+
+.nav-link-graphic path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.nav-link:hover .nav-link-graphic path {
+  stroke-dashoffset: 0;
+  transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+  transition-duration: 0.3s;
+}
+
+/* Hamburger menu color control */
+.hamburger-react > div {
+  background-color: #000000 !important;
+}
+
+.dark .hamburger-react > div {
+  background-color: #f5f4ed !important;
+}
+
+/* Noise control utilities */
+.noise-exclude {
+  isolation: isolate;
+  background: var(--background);
+}
+
+.noise-multiply {
+  mix-blend-mode: multiply;
+}
+
+.noise-overlay {
+  mix-blend-mode: overlay;
+}
+
+.noise-soft-light {
+  mix-blend-mode: soft-light;
+}

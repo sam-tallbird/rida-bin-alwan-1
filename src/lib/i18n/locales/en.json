@@ -1,0 +1,111 @@
+{
+  "common": {
+    "navbar": {
+      "home": "HOME",
+      "about": "ABOUT",
+      "campaign": "CAMPAIGN", 
+      "store": "STORE",
+      "offers": "OFFERS",
+      "culture": "CULTURE",
+      "quality": "QUALITY",
+      "community": "COMMUNITY",
+      "branches": "BRANCHES",
+      "news": "NEWS"
+    },
+    "locale": {
+      "en": "English",
+      "ar": "عربي",
+      "ku": "كوردي"
+    },
+    "footer": {
+      "description": "Since 1960, Ridha Alwan Coffee has been crafting exceptional coffee experiences in the heart of Baghdad. With over half a century of expertise, we bring you the finest coffee beans, roasted to perfection and served with passion.",
+      "usefulLinks": {
+        "title": "Useful Links",
+        "privacyPolicy": "Privacy Policy",
+        "termsConditions": "Terms & Conditions",
+        "cookiePolicy": "Cookie Policy",
+        "faq": "FAQ",
+        "contact": "Contact Us",
+        "careers": "Careers"
+      },
+      "copyright": "© 2025 Ridha Alwan Coffee. All rights reserved.",
+      "socialMedia": {
+        "followUs": "Follow Us",
+        "facebook": "Facebook",
+        "instagram": "Instagram",
+        "twitter": "Twitter",
+        "youtube": "YouTube"
+      }
+    }
+  },
+  "home": {
+    "about": {
+      "label": "About Us",
+      "description": "Since 1960, with over half a century of expertise in the art of coffee, Ridha Alwan Coffee Company was born in the heart of Baghdad, carrying with it a passion for coffee and the essence of place. Throughout these decades, we have committed to delivering coffee that carries identity and tells the story of uncompromising quality. We select the finest green coffee beans from the world's best farms and prepare them with the latest techniques, delivering them fresh, ground upon order, and infused with unforgettable flavor. Every order is prepared upon receipt... because you deserve a cup of coffee as if it were the first, every time."
+    },
+    "tasteCoffee": {
+      "headline": "Taste Half a Century of Coffee",
+      "column1": "We carefully select high-quality coffee beans from diverse origins around the world, and roast them on demand to ensure freshness every time. For over fifty years, we have strived to build a name that reflects our commitment to quality and gives your taste what it deserves.",
+      "column2": "We don't just offer coffee, we provide a complete experience that starts from selecting the bean, to roasting it, and tasting it... all according to the highest international standards. Our passion for details is what makes every cup carry the signature of Ridha Alwan Coffee."
+    },
+    "services": {
+      "label": "Services",
+      "headline": "Enjoy the Coffee Experience",
+      "cards": {
+        "card01": {
+          "headline": "Easy Electronic Payments",
+          "subline": "For a seamless experience, we offer electronic payment systems across all our branches."
+        },
+        "card02": {
+          "headline": "Complimentary Wi-Fi",
+          "subline": "Stay connected with loved ones or work seamlessly with our free internet access throughout the cafe."
+        },
+        "card03": {
+          "headline": "Event & Conference Halls",
+          "subline": "Fully equipped halls for your conferences, seminars, and events, ensuring privacy and professionalism."
+        },
+        "card04": {
+          "headline": "Meeting Rooms & Study/Work Areas",
+          "subline": "Offering private rooms for meetings, alongside dedicated spaces for focused study and productive work."
+        },
+        "card05": {
+          "headline": "Ideal Formal Meeting Setting",
+          "subline": "We provide an ideal environment for your formal meetings, combining comfort with utmost professionalism."
+        },
+        "card06": {
+          "headline": "Reading Corner & Library",
+          "subline": "Our cultural corner welcomes everyone, offering books, newspapers, and magazines to enrich your visit."
+        },
+        "card07": {
+          "headline": "Books for Purchase",
+          "subline": "Select your favorite book from our curated collection, conveniently available for sale in the cafe."
+        },
+        "card08": {
+          "headline": "Authentic Iraqi Ambiance",
+          "subline": "Our design uniquely blends past's warmth with present's elegance, reflecting true Iraqi identity."
+        }
+      }
+    }
+  },
+  "quality": {
+    "title": "Quality & Certifications",
+    "sca": {
+      "title": "SCA Membership",
+      "description": "We are proud of our membership in the Specialty Coffee Association (SCA), which has given us the advantage of communicating with coffee experts around the world, exchanging experiences, and learning about best practices. This membership has enhanced our participation in international events and exhibitions to explore everything new and distinctive in the world of coffee."
+    },
+    "iso": {
+      "title": "ISO 22000 Certification",
+      "description": "We hold the ISO 22000 certification, which ensures the highest standards of quality and safety in coffee manufacturing. This certification confirms our commitment to delivering safe and high-quality coffee products through precise procedures at every stage of production."
+    }
+  },
+  "news": {
+    "title": "News",
+    "headline": "Latest Updates and Stories from Ridha Alwan Coffee",
+    "description": "Stay informed about our latest developments, new coffee blends, community events, and the ongoing story of Baghdad's most beloved coffee destination.",
+    "backToNews": "Back to News"
+  },
+  "store": {
+    "ourProducts": "Our Products",
+    "headline": "Discover Our Premium Coffee Collection"
+  }
+} 
