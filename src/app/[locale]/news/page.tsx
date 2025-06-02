@@ -94,6 +94,8 @@ export default async function NewsPage({ params }: PageProps) {
                           className="w-full h-full object-cover"
                           width={480}
                           height={320}
+                          priority={article.id === 1}
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       </div>
                       

@@ -64,7 +64,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                 excludeFromNavbar={true}
               />
               <ConditionalLayout>
-                <main>{children}</main>
+              <main>{children}</main>
               </ConditionalLayout>
             </NextIntlClientProvider>
           </ThemeProvider>

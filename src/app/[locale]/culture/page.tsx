@@ -1,6 +1,7 @@
 import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
+import Image from 'next/image';
 
 export async function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
@@ -27,9 +28,9 @@ export default async function CulturePage({ params }: PageProps) {
       ku: 'ئێمە دەستپێدەکەین بۆ ئیلهام بەخشین!'
     },
     missionTitle: {
-      en: 'Our Cultural Mission',
-      ar: 'مهمتنا الثقافية',
-      ku: 'ئەرکی کولتوورییمان'
+      en: 'We Initiate to Inspire!',
+      ar: '!نُبادر لنُلهم',
+      ku: '!پێشخەری دەکەین بۆ ئیلهام بەخشین'
     },
     missionText: {
       en: 'The Rida Alwan Cultural Foundation was born to support Iraqi arts, thought, and creativity. We believe that every small idea has wings, and with every initiative, we nurture it until it soars high. Our events, seminars, exhibitions, and cultural programs are bridges we cross towards a more beautiful Iraq, where free voices are heard and literature and art flourish.',
@@ -47,9 +48,9 @@ export default async function CulturePage({ params }: PageProps) {
       ku: 'لە دامەزراوەی ڕیدا علوان ئێمە شوێن بۆ داهێنان دروست دەکەین! ئێمە دەستپێدەکەین بۆ ئیلهام بەخشین!'
     },
     programsTitle: {
-      en: 'Our Cultural Programs',
-      ar: 'برامجنا الثقافية',
-      ku: 'بەرنامە کولتوورییەکانمان'
+      en: 'At the Ridha Alwan Foundation, we are committed to building a platform where inspiration begins and imagination thrives.',
+      ar: 'في مؤسسة بُن رضا علوان نصنع مساحة للإبداع',
+      ku: 'لە دامەزراوەی بن ڕضا عەلوان ئێمە بۆشاییەک بۆ داهێنان دروست دەکەین'
     },
     programs: [
       {
@@ -177,35 +178,58 @@ export default async function CulturePage({ params }: PageProps) {
             <div className={`mb-16 ${
               locale === 'en' ? 'text-left' : 'text-right'
             }`}>
-              <div className="flex items-center gap-4 mb-6">
-                <div className="w-4 h-4 bg-brand-red rounded-full flex-shrink-0"></div>
-                <h2 className={`text-4xl font-bold text-brand-black dark:text-brand-white ${
-                  locale === 'en' ? 'font-sans' : 'font-arabic'
-                }`}>
-                  {cultureContent.programsTitle[locale as keyof typeof cultureContent.programsTitle]}
-                </h2>
-              </div>
+              <h2 className={`text-3xl font-medium text-brand-black dark:text-brand-white leading-relaxed max-w-4xl ${
+                locale === 'en' ? 'font-sans' : 'font-arabic'
+              }`}>
+                {cultureContent.programsTitle[locale as keyof typeof cultureContent.programsTitle]}
+              </h2>
             </div>
 
             {/* Programs Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-              {cultureContent.programs.map((program, index) => (
-                <div 
-                  key={index}
-                  className="bg-white dark:bg-brand-black rounded-xl p-8 transition-shadow duration-300"
-                >
-                  <h3 className={`text-2xl font-bold text-brand-black dark:text-brand-white mb-4 ${
-                    locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
-                  }`}>
-                    {program.title[locale as keyof typeof program.title]}
-                  </h3>
-                  <p className={`text-lg text-brand-black/70 dark:text-brand-white/70 ${
-                    locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
-                  }`}>
-                    {program.description[locale as keyof typeof program.description]}
-                  </p>
-                </div>
-              ))}
+              <div className="bg-white dark:bg-brand-black rounded-xl overflow-hidden">
+                <Image
+                  src="/imgs/culture/4.jpeg"
+                  alt="Cultural Program 1"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              
+              <div className="bg-white dark:bg-brand-black rounded-xl overflow-hidden">
+                <Image
+                  src="/imgs/culture/1.jpeg"
+                  alt="Cultural Program 2"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              
+              <div className="bg-white dark:bg-brand-black rounded-xl overflow-hidden">
+                <Image
+                  src="/imgs/culture/2.jpeg"
+                  alt="Cultural Program 3"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
+              
+              <div className="bg-white dark:bg-brand-black rounded-xl overflow-hidden">
+                <Image
+                  src="/imgs/culture/3.jpeg"
+                  alt="Cultural Program 4"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                />
+              </div>
             </div>
 
           </div>

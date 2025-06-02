@@ -153,6 +153,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
                 width={1200}
                 height={544}
                 priority
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               />
             </div>
 
