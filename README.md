@@ -1,6 +1,6 @@
 # Ridha Alwan Coffee Website
 
-A modern, multilingual website for Ridha Alwan Coffee built with Next.js 15, featuring RTL/LTR support and a professional design.
+Premium coffee experience website with CMS functionality.
 
 ## Features
 
@@ -10,6 +10,9 @@ A modern, multilingual website for Ridha Alwan Coffee built with Next.js 15, fea
 - 🎨 **Modern UI**: Tailwind CSS with custom design system
 - ⚡ **Performance**: Next.js 15 with Turbopack for fast development
 - 🔤 **Typography**: Custom fonts (Aeonik Pro + Noto Naskh Arabic)
+- Multi-language support (English, Arabic, Kurdish)
+- Dark/Light theme support
+- CMS with authentication
 
 ## Getting Started
 
@@ -58,3 +61,5 @@ To learn more about Next.js, take a look at the following resources:
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+<!-- Updated git configuration for Vercel deployment -->
