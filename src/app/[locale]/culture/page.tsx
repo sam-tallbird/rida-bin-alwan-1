@@ -137,7 +137,7 @@ export default async function CulturePage({ params }: PageProps) {
       {/* Mission Section */}
       <section className="py-20 bg-brand-white dark:bg-brand-black">
         <div className="container mx-auto px-12 max-w-full">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-8xl mx-auto">
             
             {/* Section Title */}
             <div className={`mb-12 ${
@@ -171,7 +171,7 @@ export default async function CulturePage({ params }: PageProps) {
       {/* Programs Section */}
       <section className="py-20 bg-brand-white dark:bg-brand-black">
         <div className="container mx-auto px-12 max-w-full">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-8xl mx-auto">
             
             {/* Section Title */}
             <div className={`mb-16 ${

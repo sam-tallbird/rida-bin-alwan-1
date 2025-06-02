@@ -103,62 +103,72 @@ export default async function CommunityPage({ params }: PageProps) {
       </section>
 
       {/* Main Festival Content */}
-      <section className="py-16 px-6 max-w-6xl mx-auto">
-        <div className={`space-y-8 ${
-          locale === 'en' ? 'text-left' : 'text-right'
-        }`}>
-          <p className={`text-lg leading-relaxed ${
-            locale === 'en' ? 'font-sans' : 'font-arabic'
-          }`}>
-            {communityContent.festivalDescription[locale as keyof typeof communityContent.festivalDescription]}
-          </p>
-          <p className={`text-lg leading-relaxed ${
-            locale === 'en' ? 'font-sans' : 'font-arabic'
-          }`}>
-            {communityContent.growth[locale as keyof typeof communityContent.growth]}
-          </p>
-        </div>
+      <section className="py-16 bg-brand-white dark:bg-brand-black">
+        <div className="container mx-auto px-12 max-w-full">
+          <div className="max-w-8xl mx-auto">
+            <div className={`space-y-8 ${
+              locale === 'en' ? 'text-left' : 'text-right'
+            }`}>
+              <p className={`text-lg leading-relaxed text-brand-black dark:text-brand-white ${
+                locale === 'en' ? 'font-sans' : 'font-arabic'
+              }`}>
+                {communityContent.festivalDescription[locale as keyof typeof communityContent.festivalDescription]}
+              </p>
+              <p className={`text-lg leading-relaxed text-brand-black dark:text-brand-white ${
+                locale === 'en' ? 'font-sans' : 'font-arabic'
+              }`}>
+                {communityContent.growth[locale as keyof typeof communityContent.growth]}
+              </p>
+            </div>
 
-        {/* 2024 Highlights */}
-        <div className="mt-16">
-          <h2 className={`text-4xl font-bold mb-8 ${
-            locale === 'en' ? 'text-left font-sans' : 'text-right font-arabic'
-          }`}>
-            {communityContent.highlights2024[locale as keyof typeof communityContent.highlights2024]}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-3xl font-bold text-red-600 mb-2">
-                {communityContent.visitorsNumber[locale as keyof typeof communityContent.visitorsNumber]}
-              </div>
-              <div className={`text-lg font-semibold ${
-                locale === 'en' ? 'font-sans' : 'font-arabic'
+            {/* 2024 Highlights */}
+            <div className="mt-16">
+              <h2 className={`text-4xl font-bold mb-8 text-brand-black dark:text-brand-white ${
+                locale === 'en' ? 'text-left font-sans' : 'text-right font-arabic'
               }`}>
-                {communityContent.visitorsText[locale as keyof typeof communityContent.visitorsText]}
-              </div>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className="text-3xl font-bold text-red-600 mb-2">
-                {communityContent.companiesNumber[locale as keyof typeof communityContent.companiesNumber]}
-              </div>
-              <div className={`text-lg font-semibold ${
-                locale === 'en' ? 'font-sans' : 'font-arabic'
-              }`}>
-                {communityContent.companiesText[locale as keyof typeof communityContent.companiesText]}
-              </div>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className={`text-lg font-semibold ${
-                locale === 'en' ? 'font-sans' : 'font-arabic'
-              }`}>
-                {communityContent.workshopsInfo[locale as keyof typeof communityContent.workshopsInfo]}
-              </div>
-            </div>
-            <div className="text-center p-6 bg-gray-50 rounded-lg">
-              <div className={`text-lg font-semibold ${
-                locale === 'en' ? 'font-sans' : 'font-arabic'
-              }`}>
-                {communityContent.specialtyFocus[locale as keyof typeof communityContent.specialtyFocus]}
+                {communityContent.highlights2024[locale as keyof typeof communityContent.highlights2024]}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="text-center p-6 bg-brand-white-surface dark:bg-brand-black-surface rounded-lg">
+                  <div className="text-3xl font-bold text-brand-red mb-2">
+                    {communityContent.visitorsNumber[locale as keyof typeof communityContent.visitorsNumber]}
+                  </div>
+                  <div className={`text-lg font-semibold text-brand-black dark:text-brand-white ${
+                    locale === 'en' ? 'font-sans' : 'font-arabic'
+                  }`}>
+                    {communityContent.visitorsText[locale as keyof typeof communityContent.visitorsText]}
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-brand-white-surface dark:bg-brand-black-surface rounded-lg">
+                  <div className="text-3xl font-bold text-brand-red mb-2">
+                    {communityContent.companiesNumber[locale as keyof typeof communityContent.companiesNumber]}
+                  </div>
+                  <div className={`text-lg font-semibold text-brand-black dark:text-brand-white ${
+                    locale === 'en' ? 'font-sans' : 'font-arabic'
+                  }`}>
+                    {communityContent.companiesText[locale as keyof typeof communityContent.companiesText]}
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-brand-white-surface dark:bg-brand-black-surface rounded-lg">
+                  <div className="text-2xl font-bold text-brand-red mb-2">
+                    Professional Workshops
+                  </div>
+                  <div className={`text-lg font-semibold text-brand-black dark:text-brand-white ${
+                    locale === 'en' ? 'font-sans' : 'font-arabic'
+                  }`}>
+                    & Tastings
+                  </div>
+                </div>
+                <div className="text-center p-6 bg-brand-white-surface dark:bg-brand-black-surface rounded-lg">
+                  <div className="text-2xl font-bold text-brand-red mb-2">
+                    Specialty Coffee
+                  </div>
+                  <div className={`text-lg font-semibold text-brand-black dark:text-brand-white ${
+                    locale === 'en' ? 'font-sans' : 'font-arabic'
+                  }`}>
+                    & Tea Focus
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -166,21 +176,23 @@ export default async function CommunityPage({ params }: PageProps) {
       </section>
 
       {/* Photo Gallery */}
-      <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className={`text-4xl font-bold mb-12 text-center ${
-            locale === 'en' ? 'font-sans' : 'font-arabic'
-          }`}>
-            {communityContent.galleryTitle[locale as keyof typeof communityContent.galleryTitle]}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[1, 2, 3, 4, 5, 6].map((index) => (
-              <div key={index} className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
-                <div className="w-full h-full bg-gradient-to-br from-amber-200 to-amber-400 flex items-center justify-center">
-                  <span className="text-amber-800 font-semibold">Festival Photo {index}</span>
+      <section className="py-16 bg-brand-white-surface dark:bg-brand-black-surface">
+        <div className="container mx-auto px-12 max-w-full">
+          <div className="max-w-8xl mx-auto">
+            <h2 className={`text-4xl font-bold mb-12 text-center text-brand-black dark:text-brand-white ${
+              locale === 'en' ? 'font-sans' : 'font-arabic'
+            }`}>
+              {communityContent.galleryTitle[locale as keyof typeof communityContent.galleryTitle]}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[1, 2, 3, 4, 5, 6].map((index) => (
+                <div key={index} className="aspect-square bg-gray-300 rounded-lg overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-br from-amber-200 to-amber-400 flex items-center justify-center">
+                    <span className="text-amber-800 font-semibold">Festival Photo {index}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>

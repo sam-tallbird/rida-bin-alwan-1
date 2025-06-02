@@ -34,11 +34,12 @@ export default function StoreColumns({ products, locale }: StoreColumnsProps) {
   const columnsRef = useRef<HTMLDivElement>(null);
   const columnRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  // Distribute products into 3 columns (4 products each)
+  // Distribute products into 4 columns (3 products each)
   const columns = [
-    products.slice(0, 4),  // Column 1: products 0-3
-    products.slice(4, 8),  // Column 2: products 4-7
-    products.slice(8, 12)  // Column 3: products 8-11
+    products.slice(0, 3),  // Column 1: products 0-2
+    products.slice(3, 6),  // Column 2: products 3-5
+    products.slice(6, 9),  // Column 3: products 6-8
+    products.slice(9, 12)  // Column 4: products 9-11
   ];
 
   useEffect(() => {
@@ -88,7 +89,7 @@ export default function StoreColumns({ products, locale }: StoreColumnsProps) {
   return (
     <div 
       ref={columnsRef}
-      className="columns relative py-20 grid grid-cols-3 gap-4 w-full max-w-6xl mx-auto"
+      className="columns relative py-20 grid grid-cols-4 gap-4 w-full max-w-8xl mx-auto"
     >
       {columns.map((columnProducts, columnIndex) => (
         <div

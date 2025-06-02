@@ -2,11 +2,10 @@ import type { ReactNode } from 'react';
 import { isRtlLocale, Locale, locales as availableLocales } from '@/lib/i18n/config';
 import { NextIntlClientProvider } from 'next-intl';
 import { setRequestLocale } from 'next-intl/server';
-import Navbar from '@/components/ui/Navbar/Navbar';
-import Footer from '@/components/ui/Footer/Footer';
 import ThemeProvider from '@/components/providers/ThemeProvider';
 import SmoothScrollProvider from '@/components/SmoothScrollProvider';
 import Noise from '@/components/ui/Noise';
+import ConditionalLayout from '../../components/layout/ConditionalLayout';
 import '../globals.css'; // Import globals.css here
 import { aeonik, notoNaskhArabic } from '../fonts'; // Import fonts here
 
@@ -64,9 +63,9 @@ export default async function LocaleLayout({ children, params }: LayoutProps) {
                 blendMode="multiply"
                 excludeFromNavbar={true}
               />
-              <Navbar />
-              <main>{children}</main>
-              <Footer />
+              <ConditionalLayout>
+                <main>{children}</main>
+              </ConditionalLayout>
             </NextIntlClientProvider>
           </ThemeProvider>
         </SmoothScrollProvider>
