@@ -11,8 +11,9 @@ export default getRequestConfig(async ({ requestLocale }) => {
     notFound();
   }
 
-  // Return messages for next-intl compatibility
+  // Return messages and locale for next-intl compatibility
   return {
+    locale,
     messages: (await import(`@/lib/i18n/locales/${locale}.json`)).default,
   };
 }); 

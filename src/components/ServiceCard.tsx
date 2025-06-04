@@ -34,14 +34,14 @@ export default function ServiceCard({
         </div>
         
         {/* Headline */}
-        <h4 className={`text-lg font-semibold text-brand-black dark:text-brand-white text-center mb-2 ${
+        <h4 className={`text-2xl font-semibold text-brand-black dark:text-brand-white text-center mb-2 ${
           locale === 'en' ? 'font-sans' : 'font-arabic'
         }`}>
           {t(`${cardKey}.headline`)}
         </h4>
         
         {/* Subline */}
-        <p className={`text-md text-brand-black/70 dark:text-brand-white/70 text-center mb-4 ${
+        <p className={`text-xl text-brand-black/70 dark:text-brand-white/70 text-center mb-4 ${
           locale === 'en' ? 'font-sans' : 'font-arabic'
         }`}>
           {t(`${cardKey}.subline`)}

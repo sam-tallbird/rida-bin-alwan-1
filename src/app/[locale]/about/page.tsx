@@ -2,6 +2,8 @@ import { locales as availableLocales } from '@/lib/i18n/config';
 import { setRequestLocale } from 'next-intl/server';
 import type { Locale } from '@/lib/i18n/config';
 import Image from 'next/image';
+import LottieAnimation from '@/components/LottieAnimation';
+import aboutLoopAnimation from '@/data/about-loop-animation.json';
 
 export async function generateStaticParams() {
   return availableLocales.map((locale) => ({ locale }));
@@ -42,65 +44,79 @@ export default async function AboutPage({ params }: PageProps) {
   };
 
   return (
-    <main className="min-h-screen bg-brand-white dark:bg-brand-black">
-      {/* Header Images Section */}
-      <section className="w-full h-[32rem] flex px-8 py-6 gap-4">
-        {/* Left Image */}
-        <div className="w-1/2">
-          <Image 
-            src="/imgs/about-us/header-left.JPG" 
-            alt="Coffee shop interior left"
-            className="w-full h-full object-cover rounded-lg"
-            width={800}
-            height={600}
-            priority
-          />
-        </div>
+    <>
+      <main className="min-h-screen bg-brand-white dark:bg-brand-black">
+        {/* Header Images Section */}
+        <section className="w-full h-[32rem] flex px-8 py-6 gap-4">
+          {/* Left Image */}
+          <div className="w-1/2">
+            <Image 
+              src="/imgs/about-us/header-left.JPG" 
+              alt="Coffee shop interior left"
+              className="w-full h-full object-cover rounded-lg"
+              width={800}
+              height={600}
+              priority
+            />
+          </div>
 
-        {/* Right Image */}
-        <div className="w-1/2">
-          <Image 
-            src="/imgs/about-us/header-right.JPG" 
-            alt="Coffee shop interior right"
-            className="w-full h-full object-cover rounded-lg"
-            width={800}
-            height={600}
-            priority
-          />
-        </div>
-      </section>
+          {/* Right Image */}
+          <div className="w-1/2">
+            <Image 
+              src="/imgs/about-us/header-right.JPG" 
+              alt="Coffee shop interior right"
+              className="w-full h-full object-cover rounded-lg"
+              width={800}
+              height={600}
+              priority
+            />
+          </div>
+        </section>
 
-      {/* Content Section */}
-      <section className="py-20 bg-brand-white dark:bg-brand-black">
-        <div className="container mx-auto px-12 max-w-full">
-          <div className="max-w-8xl">
-            {/* Title */}
-            <div className="mb-16">
-              <h1 className={`text-6xl font-bold text-brand-black dark:text-brand-white ${
-                locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
-              }`}>
-                {aboutContent.title[locale as keyof typeof aboutContent.title]}
-              </h1>
-            </div>
+        {/* Content Section */}
+        <section className="py-20 bg-brand-white dark:bg-brand-black">
+          <div className="container mx-auto px-12 max-w-full">
+            <div className="max-w-8xl">
+              {/* Title */}
+              <div className="mb-16">
+                <h1 className={`text-6xl font-bold text-brand-black dark:text-brand-white ${
+                  locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
+                }`}>
+                  {aboutContent.title[locale as keyof typeof aboutContent.title]}
+                </h1>
+              </div>
 
-            {/* Content Paragraphs */}
-            <div className="max-w-7xl mb-16">
-              <div className="space-y-8">
-                {aboutContent.paragraphs[locale as keyof typeof aboutContent.paragraphs].map((paragraph, index) => (
-                  <p 
-                    key={index}
-                    className={`text-lg leading-relaxed text-brand-black/80 dark:text-brand-white/80 ${
-                      locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
-                    }`}
-                  >
-                    {paragraph}
-                  </p>
-                ))}
+              {/* Content Paragraphs */}
+              <div className="max-w-7xl mb-16">
+                <div className="space-y-8">
+                  {aboutContent.paragraphs[locale as keyof typeof aboutContent.paragraphs].map((paragraph, index) => (
+                    <p 
+                      key={index}
+                      className={`text-lg leading-relaxed text-brand-black/80 dark:text-brand-white/80 ${
+                        locale === 'en' ? 'font-sans text-left' : 'font-arabic text-right'
+                      }`}
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-    </div>
-      </section>
-    </main>
+        </section>
+
+        {/* Lottie Animation Section */}
+        <section className="w-full bg-brand-white dark:bg-brand-black">
+          <div className="w-full">
+            <LottieAnimation 
+              animationData={aboutLoopAnimation}
+              className="h-[60vh] md:h-[70vh] lg:h-[80vh]"
+              loop={true}
+              autoplay={true}
+            />
+          </div>
+        </section>
+      </main>
+    </>
   );
 } 

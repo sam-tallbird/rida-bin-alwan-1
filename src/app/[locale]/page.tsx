@@ -23,27 +23,32 @@ export default async function Home({ params }: PageProps) {
 
   // Services cards data with random rotations
   const servicesCardsData = [
-    { cardKey: 'card01', imageSrc: '/services-cards/ss-img-1.jpg', rotation: -2 },
-    { cardKey: 'card02', imageSrc: '/services-cards/ss-img-2.jpg', rotation: 1 },
-    { cardKey: 'card03', imageSrc: '/services-cards/ss-img-3.jpg', rotation: 3 },
-    { cardKey: 'card04', imageSrc: '/services-cards/ss-img-4.jpg', rotation: -1 },
-    { cardKey: 'card05', imageSrc: '/services-cards/ss-img-1.jpg', rotation: 2 },
-    { cardKey: 'card06', imageSrc: '/services-cards/ss-img-2.jpg', rotation: -0.5 },
-    { cardKey: 'card07', imageSrc: '/services-cards/ss-img-3.jpg', rotation: 1.5 },
-    { cardKey: 'card08', imageSrc: '/services-cards/ss-img-4.jpg', rotation: -2.5 },
+    { cardKey: 'card01', imageSrc: '/services-cards/01.svg', rotation: -2 },
+    { cardKey: 'card02', imageSrc: '/services-cards/02.svg', rotation: 1 },
+    { cardKey: 'card03', imageSrc: '/services-cards/03.svg', rotation: 3 },
+    { cardKey: 'card04', imageSrc: '/services-cards/04.svg', rotation: -1 },
+    { cardKey: 'card05', imageSrc: '/services-cards/05.svg', rotation: 2 },
+    { cardKey: 'card06', imageSrc: '/services-cards/06.svg', rotation: -0.5 },
+    { cardKey: 'card07', imageSrc: '/services-cards/07.svg', rotation: 1.5 },
+    { cardKey: 'card08', imageSrc: '/services-cards/08.svg', rotation: -2.5 },
   ];
   
   return (
     <main>
       {/* Hero Section */}
-      <section 
-        className="w-full h-screen bg-cover bg-center bg-no-repeat relative"
-        style={{
-          backgroundImage: 'url(/imgs/banner.jpg)'
-        }}
-      >
-        {/* Optional overlay for better text readability */}
-        <div className="absolute inset-0 bg-brand-black bg-opacity-30"></div>
+      <section className="w-full h-screen relative overflow-hidden">
+        {/* Background Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-compressed.mp4" type="video/mp4" />
+          {/* Fallback for browsers that don't support video */}
+          Your browser does not support the video tag.
+        </video>
         
         {/* Hero content can be added here later */}
         <div className="relative z-10 flex items-center justify-center h-full">
