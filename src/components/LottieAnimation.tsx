@@ -4,7 +4,7 @@ import { useMemo } from 'react';
 import Lottie from 'lottie-react';
 
 interface LottieAnimationProps {
-  animationData: any;
+  animationData: object; // Changed from 'any' to 'object' to fix TypeScript error
   className?: string;
   loop?: boolean;
   autoplay?: boolean;
